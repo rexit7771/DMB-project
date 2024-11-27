@@ -18,7 +18,8 @@ module.exports = function errorHandler(error, req, res, next) {
         case "Invalid Username / Password":
             status = 401;
             break;
-        default:
+        case "Invalid Token":
+            status = 401;
             break;
     }
     res.status(status).json({ message: name });

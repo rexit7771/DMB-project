@@ -3,7 +3,7 @@ const { Product } = require('../models');
 module.exports = class ProductController {
     static async getAllProduct(req, res, next) {
         try {
-            req.status(200).json({ message: "Udah di Get All Product" });
+            res.status(200).json({ message: "Udah di Get All Product" });
         } catch (error) {
             next(error);
         }

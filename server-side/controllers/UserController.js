@@ -12,7 +12,7 @@ module.exports = class UserController {
             if (!user) throw { name: "Invalid Username / Password" };
             if (!comparing(password, user.password)) throw { name: "Invalid Username / Password" };
 
-            const access_token = signPayload(req.body);
+            const access_token = signPayload({ id: user.id, role: user.role });
 
             res.status(200).json({ access_token: access_token });
         } catch (error) {
