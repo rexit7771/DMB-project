@@ -2,7 +2,7 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     /**
      * Add seed commands here.
      *
@@ -12,14 +12,20 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
+    const blogs = require("../db/blog.json").map(el => {
+      el.createdAt = el.updatedAt = new Date();
+      return el
+    });
+    await queryInterface.bulkInsert('Blogs', blogs);
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     /**
      * Add commands to revert seed here.
      *
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
+    await queryInterface.bulkDelete('Blogs', null);
   }
 };

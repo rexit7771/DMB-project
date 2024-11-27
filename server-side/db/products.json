@@ -1,0 +1,14 @@
+[
+    {
+        "title": "KONSULTAN MANAJEMEN & BISNIS",
+        "description": "Usaha perusahaan untuk membuat program-program kerja bagi peningkatan sumber daya manusia melalui tenaga ahli atau konsultan",
+        "image": "https://picsum.photos/200/300",
+        "UserId": 1
+    },
+    {
+        "title": "PELATIHAN KERJA PEMERINTAH & SWASTA",
+        "description": "Sebagai usaha untuk memperkaya pengetahuan, keterampilan, sikap maupun motivasi para pekerja,melalui pelatihan-pelatihan, Kerjasama dilakukan melalui moduk-modul training yang telah disepakati",
+        "image": "https://picsum.photos/300/300",
+        "UserId": 2
+    }
+]

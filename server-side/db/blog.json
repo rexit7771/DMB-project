@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Post 1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id volutpat lorem. Etiam ultricies mauris nunc, ac rhoncus velit consequat.",
+        "image": "https://dmbglobal.co.id/wp-content/uploads/2023/04/2.jpeg",
+        "UserId": 1
+    },
+    {
+        "title": "Post 2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id volutpat lorem. Etiam ultricies mauris nunc, ac rhoncus velit consequat.",
+        "image": "https://dmbglobal.co.id/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-12-at-15.24.39_247694b7-1200x1200.jpg",
+        "UserId": 2
+    }
+]
