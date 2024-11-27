@@ -60,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     hooks: {
-      beforeBulkCreate: (instance, options) => instance.password = hashing(instance.password)
+      beforeCreate: (instance, options) => instance.password = hashing(instance.password)
     },
     sequelize,
     modelName: 'User',
