@@ -50,7 +50,29 @@ module.exports = (sequelize, DataTypes) => {
           msg: "Image is Required"
         }
       }
-    }
+    },
+    UserId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: {
+          tableName: "Users",
+          key: "id"
+        }
+      },
+      validate: {
+        notEmpty: {
+          msg: "User Id is Required"
+        },
+        notNull: {
+          msg: "User Id is Required"
+        }
+      }
+    },
+    status: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
   }, {
     sequelize,
     modelName: 'Blog',

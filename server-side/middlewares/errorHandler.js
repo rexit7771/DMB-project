@@ -4,6 +4,9 @@ module.exports = function errorHandler(error, req, res, next) {
     let name = error.name || "Internal Server Error";
 
     switch (name) {
+        case "Username / Password is required":
+            status = 400;
+            break;
         case "SequelizeUniqueConstraintError":
             status = 401;
             name = "Username has been used";
@@ -12,14 +15,15 @@ module.exports = function errorHandler(error, req, res, next) {
             status = 401;
             name = error.errors[0].message;
             break;
-        case "Username / Password is required":
-            status = 400;
-            break;
         case "Invalid Username / Password":
             status = 401;
             break;
         case "Invalid Token":
             status = 401;
+            break;
+        case "Forbidden":
+            message = "You are unauthorized";
+            status = 403;
             break;
     }
     res.status(status).json({ message: name });

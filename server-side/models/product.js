@@ -68,7 +68,11 @@ module.exports = (sequelize, DataTypes) => {
           msg: "User Id is Required"
         }
       }
-    }
+    },
+    status: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
   }, {
     sequelize,
     modelName: 'Product',
